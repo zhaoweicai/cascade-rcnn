@@ -30,30 +30,30 @@ We benchmark mulitple detector models on the MS-COCO and PASCAL VOC datasets in 
 
 model     | #GPUs | batch size |lr        | max_iter     | train time| AP | AP50 | AP75 
 ---------|--------|-----|--------|-----|-----|-------|--------|----- 
-VGG-RPN-baseline     | 2 | 4    |3e-3| 100k   |  12.5 hr | 23.6 | 43.9 | 23.0 
-VGG-RPN-Cascade     | 2 | 4    |3e-3| 100k   |  15.5 hr | 27.0 | 44.2 | 27.7
-Res50-RFCN-baseline     | 4 | 1    |3e-3| 280k   |  19 hr | 27.0 | 44.2 | 27.7 
-Res50-RFCN-Cascade     | 4 | 1    |3e-3| 280k   |  22.5 hr | 31.1 | 49.8 | 32.8
-Res101-RFCN-baseline     | 4 | 1    |3e-3| 280k   |  29 hr | 30.3 | 52.2 | 30.8 
-Res101-RFCN-Cascade     | 4 | 1    |3e-3| 280k   |  30.5 hr | 33.3 | 52.0 | 35.2
-Res50-FPN-baseline     | 8 | 1    |5e-3| 280k   |  32 hr | 36.5 | 58.6 | 39.2 
-Res50-FPN-Cascade     | 8 | 1    |5e-3| 280k   |  36 hr | 40.3 | 59.4 | 43.7
-Res101-FPN-baseline     | 8 | 1    |5e-3| 280k   |  37 hr | 38.5 | 60.6 | 41.7 
-Res101-FPN-Cascade     | 8 | 1    |5e-3| 280k   |  46 hr | 42.7 | 61.6 | 46.6
+VGG-RPN-baseline Â  Â  | 2 | 4 Â   |3e-3| 100k   |  12.5 hr | 23.6 | 43.9 | 23.0 
+VGG-RPN-Cascade Â  Â  | 2 | 4 Â   |3e-3| 100k   |  15.5 hr | 27.0 | 44.2 | 27.7
+Res50-RFCN-baseline Â  Â  | 4 | 1 Â   |3e-3| 280k   |  19 hr | 27.0 | 48.7 | 26.9 
+Res50-RFCN-Cascade Â  Â  | 4 | 1 Â   |3e-3| 280k   |  22.5 hr | 31.1 | 49.8 | 32.8
+Res101-RFCN-baseline Â  Â  | 4 | 1 Â   |3e-3| 280k   |  29 hr | 30.3 | 52.2 | 30.8 
+Res101-RFCN-Cascade Â  Â  | 4 | 1 Â   |3e-3| 280k   |  30.5 hr | 33.3 | 52.0 | 35.2
+Res50-FPN-baseline Â  Â  | 8 | 1 Â   |5e-3| 280k   |  32 hr | 36.5 | 58.6 | 39.2 
+Res50-FPN-Cascade Â  Â  | 8 | 1 Â   |5e-3| 280k   |  36 hr | 40.3 | 59.4 | 43.7
+Res101-FPN-baseline Â  Â  | 8 | 1 Â   |5e-3| 280k   |  37 hr | 38.5 | 60.6 | 41.7 
+Res101-FPN-Cascade Â  Â  | 8 | 1 Â   |5e-3| 280k   |  46 hr | 42.7 | 61.6 | 46.6
 
 
 2. PASCAL VOC 2007 (Train/Test: 2007+2012trainval/2007test, shorter size: 600)
 
 model     | #GPUs | batch size |lr        | max_iter     | train time| AP | AP50 | AP75 
 ---------|--------|-----|--------|-----|-----|-------|--------|----- 
-Alex-RPN-baseline     | 2 | 4    |1e-3| 45k   |  2.5 hr | 29.4 | 63.2 | 23.7 
-Alex-RPN-Cascade     | 2 | 4    |1e-3| 45k   |  3 hr | 38.9 | 66.5 | 40.5
-VGG-RPN-baseline     | 2 | 4    |1e-3| 45k   |  6 hr | 42.9 | 76.4 | 44.1 
-VGG-RPN-Cascade     | 2 | 4    |1e-3| 45k   |  7.5 hr | 51.2 | 79.1 | 56.3
-Res50-RFCN-baseline     | 2 | 2    |2e-3| 90k   |  8 hr | 44.8 | 77.5 | 46.8 
-Res50-RFCN-Cascade     | 2 | 2    |2e-3| 90k   |  9 hr | 51.8 | 78.5 | 57.1
-Res101-RFCN-baseline     | 2 | 2    |2e-3| 90k   |  10.5 hr | 49.4 | 79.8 | 53.2 
-Res101-RFCN-Cascade     | 2 | 2    |2e-3| 90k   |  12 hr | 54.2 | 79.6 | 59.2
+Alex-RPN-baseline Â  Â  | 2 | 4 Â   |1e-3| 45k   |  2.5 hr | 29.4 | 63.2 | 23.7 
+Alex-RPN-Cascade Â  Â  | 2 | 4 Â   |1e-3| 45k   |  3 hr | 38.9 | 66.5 | 40.5
+VGG-RPN-baseline Â  Â  | 2 | 4 Â   |1e-3| 45k   |  6 hr | 42.9 | 76.4 | 44.1 
+VGG-RPN-Cascade Â  Â  | 2 | 4 Â   |1e-3| 45k   |  7.5 hr | 51.2 | 79.1 | 56.3
+Res50-RFCN-baseline Â  Â  | 2 | 2 Â   |2e-3| 90k   |  8 hr | 44.8 | 77.5 | 46.8 
+Res50-RFCN-Cascade Â  Â  | 2 | 2 Â   |2e-3| 90k   |  9 hr | 51.8 | 78.5 | 57.1
+Res101-RFCN-baseline Â  Â  | 2 | 2 Â   |2e-3| 90k   |  10.5 hr | 49.4 | 79.8 | 53.2 
+Res101-RFCN-Cascade Â  Â  | 2 | 2 Â   |2e-3| 90k   |  12 hr | 54.2 | 79.6 | 59.2
 
 **NOTE**. In the above tables, all models have been run at least two times with close results. The training is relatively stable. RPN means Faster R-CNN. The annotations of PASCAL VOC are transformed to COCO format, and COCO API was used for evaluation. The results are different from the official VOC evaluation. If you want to compare the VOC results in publication, please use the official VOC code for evaluation.
 
@@ -65,12 +65,12 @@ Res101-RFCN-Cascade     | 2 | 2    |2e-3| 90k   |  12 hr | 54.2 | 79.6 | 59.2
 
 ## Installation
 
-1. Clone the CASCADE-RCNN repository, and we'll call the directory that you cloned CASCADE-RCNN into `CASCADE_ROOT`
+1. Clone the Cascade-RCNN repository, and we'll call the directory that you cloned Cascade-RCNN into `CASCADE_ROOT`
     ```Shell
     git clone https://github.com/zhaoweicai/cascade-rcnn.git
     ```
   
-2. Build CASCADE-RCNN
+2. Build Cascade-RCNN
     ```Shell
     cd $CASCADE_ROOT/
     # Follow the Caffe installation instructions here:
@@ -80,7 +80,7 @@ Res101-RFCN-Cascade     | 2 | 2    |2e-3| 90k   |  12 hr | 54.2 | 79.6 | 59.2
     # and your Makefile.config in place, then simply do:
     make all -j 16
 
-    # If you want to run CASCADE-RCNN detection/evaluation demo, build MATLAB wrapper as well
+    # If you want to run Cascade-RCNN detection/evaluation demo, build MATLAB wrapper as well
     make matcaffe
     ```
 
@@ -90,7 +90,7 @@ If you already have a COCO/VOC copy but not as organized as below, you can simpl
 
 ### MS-COCO
 
-In all MS-COCO experiments, we use `train2017` for training, and `val2017` (a.k.a. `minival`) for validation, and `test-dev` for final evaluation. Follow [MS-COCO website](http://cocodataset.org/#download) to download images/annotations, and set-up the COCO API.
+In all MS-COCO experiments, we use `train2017` for training, and `val2017` (a.k.a. `minival`) for validation. Follow [MS-COCO website](http://cocodataset.org/#download) to download images/annotations, and set-up the COCO API.
 
 Assumed that your local COCO dataset copy is at `/your/path/to/coco`, make sure it has the following directory structure:
 
@@ -112,7 +112,7 @@ coco
 
 ### PASCAL VOC
 
-In all PASCAL VOC experiments, we use VOC2007+VOC2012 `trainval` for training, and VOC2007 `test` for evaluation. Follow [PASCAL VOC website](http://host.robots.ox.ac.uk/pascal/VOC/) to download images/annotations, and set-up the VOCdevkit.
+In all PASCAL VOC experiments, we use VOC2007+VOC2012 `trainval` for training, and VOC2007 `test` for validation. Follow [PASCAL VOC website](http://host.robots.ox.ac.uk/pascal/VOC/) to download images/annotations, and set-up the VOCdevkit.
 
 Assumed that your local VOCdevkit copy is at `/your/path/to/VOCdevkit`, make sure it has the following directory structure:
 
@@ -141,7 +141,7 @@ VOCdevkit
 |_ VOCcode
 ```
 
-## Training CASCADE-RCNN
+## Training Cascade-RCNN
 
 1. Get the training data
     ```Shell
@@ -157,7 +157,7 @@ VOCdevkit
     sh fetch_vggnet.sh
     ```
 
-3. Multiple shell scripts are provided to train CASCADE-RCNN on different baseline detectors as described in our paper. Under each model folder, you need to change the `root_folder` of the data layer in `train.prototxt` and `test.prototxt` to your COCO path. After that, you can start to train your own CASCADE-RCNN models. Take `vgg-12s-600-rpn-cascade` for example. 
+3. Multiple shell scripts are provided to train Cascade-RCNN on different baseline detectors as described in our paper. Under each model folder, you need to change the `root_folder` of the data layer in `train.prototxt` and `test.prototxt` to your COCO path. After that, you can start to train your own Cascade-RCNN models. Take `vgg-12s-600-rpn-cascade` for example. 
     ```Shell
     cd $CASCADE_ROOT/examples/coco/vgg-12s-600-rpn-cascade/
     sh train_detection.sh
@@ -168,7 +168,7 @@ VOCdevkit
 
 ## Pretrained Models
 
-We only provide the Res50-FPN baseline, Res50-FPN-Cascade and Res101-FPN-Cascade models, for COCO dataset, and Res101-RFCN-Cascade for VOC dataset.
+We only provide the Res50-FPN-baseline, Res50-FPN-Cascade and Res101-FPN-Cascade models for COCO dataset, and Res101-RFCN-Cascade for VOC dataset.
 
 Download pre-trained models
 ```Shell
@@ -179,9 +179,9 @@ The pretrained models produce exactly the same results as described in our paper
 
 ## Testing/Evaluation Demo
 
-Once the models pretrained or trained by yourself are available, you can use the MATLAB script `run_cascadercnn_coco.m` to obtain the detection and evaluation results. Set the right dataset path and choose the model of your interest to test in the demo script. The default setting is to test the pretrained model. The final detection results will be saved under $CASCADE_ROOT/examples/coco/detections/ and the evaluation results will be saved under the model folder.
+Once the models pretrained or trained by yourself are available, you can use the MATLAB script `run_cascadercnn_coco.m` to obtain the detection and evaluation results. Set the right dataset path and choose the model of your interest to test in the demo script. The default setting is for the pretrained model. The final detection results will be saved under `$CASCADE_ROOT/examples/coco/detections/` and the evaluation results will be saved under the model folder.
 
-You also can run the shell `test_coco_detection.sh` under each model folder for evalution, but it is not identical to the official evaluation. For publication, use the MATLAB script.
+You also can run the shell script `test_coco_detection.sh` under each model folder for evalution, but it is not identical to the official evaluation. For publication, use the MATLAB script.
 
 ## Disclaimer
 
