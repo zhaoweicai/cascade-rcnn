@@ -8,7 +8,7 @@ This repository is written by Zhaowei Cai at UC San Diego.
 
 This repository implements mulitple popular object detection algorithms, including Faster R-CNN, R-FCN, FPN, and our recently proposed Cascade R-CNN, on the MS-COCO and PASCAL VOC datasets. Multiple choices are available for backbone network, including AlexNet, VGG-Net and ResNet. It is written in C++ and powered by [Caffe](https://github.com/BVLC/caffe) deep learning toolbox. 
 
-Cascade R-CNN is a multi-stage extension of the popular two-stage R-CNN object detection framework. The goal is to obtain high quality object detection, which can effectively reject close false positives. It consists of a sequence of detectors trained end-to-end with increasing IoU thresholds, to be sequentially more selective against close false positives. The output of a previous stage detector is forwarded to a later stage detector, and the detection results will be improved stage by stage. This idea can be applied to any detector based on the two-stage R-CNN framework, including Faster R-CNN, R-FCN, FPN, Mask R-CNN, etc, and reliable gains are available independently of baseline strength. A vanilla Cascade R-CNN on FPN detector of ResNet-101 backbone network, without any training or inference bells and whistles, achieved state-of-the-art results on the challenging MS-COCO dataset.
+[Cascade R-CNN](https://arxiv.org/abs/1712.00726) is a multi-stage extension of the popular two-stage R-CNN object detection framework. The goal is to obtain high quality object detection, which can effectively reject close false positives. It consists of a sequence of detectors trained end-to-end with increasing IoU thresholds, to be sequentially more selective against close false positives. The output of a previous stage detector is forwarded to a later stage detector, and the detection results will be improved stage by stage. This idea can be applied to any detector based on the two-stage R-CNN framework, including Faster R-CNN, R-FCN, FPN, Mask R-CNN, etc, and reliable gains are available independently of baseline strength. A vanilla Cascade R-CNN on FPN detector of ResNet-101 backbone network, without any training or inference bells and whistles, achieved state-of-the-art results on the challenging MS-COCO dataset.
 
 ## Citation
 
@@ -28,23 +28,23 @@ We benchmark mulitple detector models on the MS-COCO and PASCAL VOC datasets in 
 
 1. MS-COCO (Train/Test: train2017/val2017, shorter size: 800 for FPN and 600 for the others)
 
-model     | #GPUs | batch size |lr        | max_iter     | train time| AP | AP50 | AP75 
+model     | #GPUs | batch size | lr | iter | train time | test speed | AP | AP50 | AP75 
 ---------|--------|-----|--------|-----|-----|-------|--------|----- 
-VGG-RPN-baseline     | 2 | 4    |3e-3| 100k   |  12.5 hr | 23.6 | 43.9 | 23.0 
-VGG-RPN-Cascade     | 2 | 4    |3e-3| 100k   |  15.5 hr | 27.0 | 44.2 | 27.7
-Res50-RFCN-baseline     | 4 | 1    |3e-3| 280k   |  19 hr | 27.0 | 48.7 | 26.9 
-Res50-RFCN-Cascade     | 4 | 1    |3e-3| 280k   |  22.5 hr | 31.1 | 49.8 | 32.8
-Res101-RFCN-baseline     | 4 | 1    |3e-3| 280k   |  29 hr | 30.3 | 52.2 | 30.8 
-Res101-RFCN-Cascade     | 4 | 1    |3e-3| 280k   |  30.5 hr | 33.3 | 52.0 | 35.2
-Res50-FPN-baseline     | 8 | 1    |5e-3| 280k   |  32 hr | 36.5 | 58.6 | 39.2 
-Res50-FPN-Cascade     | 8 | 1    |5e-3| 280k   |  36 hr | 40.3 | 59.4 | 43.7
-Res101-FPN-baseline     | 8 | 1    |5e-3| 280k   |  37 hr | 38.5 | 60.6 | 41.7 
-Res101-FPN-Cascade     | 8 | 1    |5e-3| 280k   |  46 hr | 42.7 | 61.6 | 46.6
+VGG-RPN-baseline     | 2 | 4    |3e-3| 100k   |  12.5 hr |  0.075s | 23.6 | 43.9 | 23.0 
+VGG-RPN-Cascade     | 2 | 4    |3e-3| 100k   |  15.5 hr |  0.115s | 27.0 | 44.2 | 27.7
+Res50-RFCN-baseline     | 4 | 1    |3e-3| 280k   |  19 hr |  0.07s | 27.0 | 48.7 | 26.9 
+Res50-RFCN-Cascade     | 4 | 1    |3e-3| 280k   |  22.5 hr |  0.075s | 31.1 | 49.8 | 32.8
+Res101-RFCN-baseline     | 4 | 1    |3e-3| 280k   |  29 hr |  0.075s | 30.3 | 52.2 | 30.8 
+Res101-RFCN-Cascade     | 4 | 1    |3e-3| 280k   |  30.5 hr |  0.085s | 33.3 | 52.0 | 35.2
+Res50-FPN-baseline     | 8 | 1    |5e-3| 280k   |  32 hr |  0.095s | 36.5 | 58.6 | 39.2 
+Res50-FPN-Cascade     | 8 | 1    |5e-3| 280k   |  36 hr |  0.115s | 40.3 | 59.4 | 43.7
+Res101-FPN-baseline     | 8 | 1    |5e-3| 280k   |  37 hr |  0.115s | 38.5 | 60.6 | 41.7 
+Res101-FPN-Cascade     | 8 | 1    |5e-3| 280k   |  46 hr |  0.14s | 42.7 | 61.6 | 46.6
 
 
 2. PASCAL VOC 2007 (Train/Test: 2007+2012trainval/2007test, shorter size: 600)
 
-model     | #GPUs | batch size |lr        | max_iter     | train time| AP | AP50 | AP75 
+model     | #GPUs | batch size | lr | iter | train time | AP | AP50 | AP75 
 ---------|--------|-----|--------|-----|-----|-------|--------|----- 
 Alex-RPN-baseline     | 2 | 4    |1e-3| 45k   |  2.5 hr | 29.4 | 63.2 | 23.7 
 Alex-RPN-Cascade     | 2 | 4    |1e-3| 45k   |  3 hr | 38.9 | 66.5 | 40.5
