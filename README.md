@@ -28,8 +28,8 @@ We benchmark mulitple detector models on the MS-COCO and PASCAL VOC datasets in 
 
 1. MS-COCO (Train/Test: train2017/val2017, shorter size: 800 for FPN and 600 for the others)
 
-model     | #GPUs | batch size | lr | iter | train time | test speed | AP | AP50 | AP75 
----------|--------|-----|--------|-----|-----|-------|--------|----- 
+model     | #GPUs | bs | lr | iter | train time | test time | AP | AP50 | AP75 
+---------|--------|-----|--------|-----|-----|-------|-------|--------|----- 
 VGG-RPN-baseline     | 2 | 4    |3e-3| 100k   |  12.5 hr |  0.075s | 23.6 | 43.9 | 23.0 
 VGG-RPN-Cascade     | 2 | 4    |3e-3| 100k   |  15.5 hr |  0.115s | 27.0 | 44.2 | 27.7
 Res50-RFCN-baseline     | 4 | 1    |3e-3| 280k   |  19 hr |  0.07s | 27.0 | 48.7 | 26.9 
@@ -44,7 +44,7 @@ Res101-FPN-Cascade     | 8 | 1    |5e-3| 280k   |  46 hr |  0.14s | 42.7 | 61
 
 2. PASCAL VOC 2007 (Train/Test: 2007+2012trainval/2007test, shorter size: 600)
 
-model     | #GPUs | batch size | lr | iter | train time | AP | AP50 | AP75 
+model     | #GPUs | bs | lr | iter | train time | AP | AP50 | AP75 
 ---------|--------|-----|--------|-----|-----|-------|--------|----- 
 Alex-RPN-baseline     | 2 | 4    |1e-3| 45k   |  2.5 hr | 29.4 | 63.2 | 23.7 
 Alex-RPN-Cascade     | 2 | 4    |1e-3| 45k   |  3 hr | 38.9 | 66.5 | 40.5
