@@ -10,6 +10,10 @@ This repository implements mulitple popular object detection algorithms, includi
 
 [Cascade R-CNN](http://www.svcl.ucsd.edu/publications/conference/2018/cvpr/cascade-rcnn.pdf) is a multi-stage extension of the popular two-stage R-CNN object detection framework. The goal is to obtain high quality object detection, which can effectively reject close false positives. It consists of a sequence of detectors trained end-to-end with increasing IoU thresholds, to be sequentially more selective against close false positives. The output of a previous stage detector is forwarded to a later stage detector, and the detection results will be improved stage by stage. This idea can be applied to any detector based on the two-stage R-CNN framework, including Faster R-CNN, R-FCN, FPN, Mask R-CNN, etc, and reliable gains are available independently of baseline strength. A vanilla Cascade R-CNN on FPN detector of ResNet-101 backbone network, without any training or inference bells and whistles, achieved state-of-the-art results on the challenging MS-COCO dataset.
 
+## Update
+
+The re-implementation of Cascade R-CNN in Detectron has been released. See [Detectron-Cascade-RCNN](https://github.com/zhaoweicai/Detectron-Cascade-RCNN). Very consistent improvements are available for all tested models, independent of baseline strength.
+
 ## Citation
 
 If you use our code/model/data, please cite our paper:
