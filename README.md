@@ -14,6 +14,8 @@ This repository implements mulitple popular object detection algorithms, includi
 
 The re-implementation of Cascade R-CNN in Detectron has been released. See [Detectron-Cascade-RCNN](https://github.com/zhaoweicai/Detectron-Cascade-RCNN). Very consistent improvements are available for all tested models, independent of baseline strength.
 
+It is also recommended to use the third-party implementation, [mmdetection](https://github.com/open-mmlab/mmdetection) based on PyTorch and [tensorpack](https://github.com/tensorpack/tensorpack/tree/master/examples/FasterRCNN) based on TensorFlow.
+
 ## Citation
 
 If you use our code/model/data, please cite our paper:
