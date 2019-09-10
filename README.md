@@ -26,7 +26,14 @@ If you use our code/model/data, please cite our paper:
       booktitle = {CVPR},
       Year  = {2018}
     }
+or
 
+    @article{cai2019cascadercnn,
+      author = {Zhaowei Cai and Nuno Vasconcelos},
+      title = {Cascade R-CNN: High Quality Object Detection and Instance Segmentation},
+      journal = {arXiv preprint arXiv:1906.09756},
+      year = {2019}
+    }
 
 ## Benchmarking
 
