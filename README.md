@@ -26,7 +26,7 @@ If you use our code/model/data, please cite our paper:
       booktitle = {CVPR},
       Year  = {2018}
     }
-or
+or its extension:
 
     @article{cai2019cascadercnn,
       author = {Zhaowei Cai and Nuno Vasconcelos},
